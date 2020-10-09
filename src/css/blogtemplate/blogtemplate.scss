@@ -1,0 +1,18 @@
+
+@import '../variables';
+
+#blog_details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $primaryColor;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#avatar {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}

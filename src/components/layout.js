@@ -1,10 +1,16 @@
 import React from "react"
 import "../css/global.scss"
+import "../css/layout.scss"
 
 export default function Layout({ children }) {
+  
+
+  
   return (
-    <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
-      <h3>AppContext</h3>
+    <div>
+      <div id="layout_header">
+      <h1>AppContext</h1>
+      </div>
       {children}
     </div>
   )

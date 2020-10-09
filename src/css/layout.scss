@@ -1,0 +1,9 @@
+@import './variables.scss';
+@import './variables.scss';
+
+#layout_header {
+    background-color: $primaryColor;
+    color : white;
+    display: flex;
+    justify-content: center;
+}

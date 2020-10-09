@@ -1,6 +1,33 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import './variables.scss';
+
+
 
 * {
     font-family: 'Lato', sans-serif;
    }
+
+   html {
+       line-height: 1.8;
+   }
+
+   * { margin:0; padding:0; box-sizing:border-box; }
+
+   ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background :  white;
+    border-radius: 10px;
+    width: 5px;
+    padding : 5px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $primaryColor;
+    border-radius: 10px;
+  }
