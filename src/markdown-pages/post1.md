@@ -1,7 +1,7 @@
 ---
 slug: "/blog/post1"
 date: "2019-05-04"
-title: "How to use coroutines"
+title: "Coroutine introduction"
 author : "Sushobh Nadiger"
 ---
 

@@ -3,6 +3,10 @@ import { graphql } from "gatsby"
 import "../css/blogtemplate/blogtemplate.scss"
 import Layout from "../components/layout"
 
+
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+deckDeckGoHighlightElement();
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
