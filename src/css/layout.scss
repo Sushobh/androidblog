@@ -5,5 +5,19 @@
     background-color: $primaryColor;
     color : white;
     display: flex;
-    justify-content: center;
+    padding: 2px;
+    justify-content: space-between;
+    align-items: center;
 }
+
+#layout_header h1 {
+    padding-left: 10px;
+}
+
+#layout_header Link {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+
+
