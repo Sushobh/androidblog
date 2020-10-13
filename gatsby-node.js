@@ -2,7 +2,16 @@
 const path = require("path");
 
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
+ exports.createPages = async ({ actions, graphql, reporter }) => {
+       await createPostPages(actions,graphql);
+       createAuthorPages();
+  }
+
+  async function createAuthorPages(actions,graphql){
+
+  }
+
+  async function createPostPages(actions,graphql){
     const { createPage } = actions
   
     const blogPostTemplate = require.resolve(`./src/templates/blogTemplate.js`)

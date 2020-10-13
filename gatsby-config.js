@@ -24,6 +24,12 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: "gatsby-plugin-authors",
+      options: {
+        templatePath: `${__dirname}/src/templates/authorsindex.js`,
+      },
     }
   ]
   
