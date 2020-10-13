@@ -15,6 +15,8 @@
   },
   "dependencies": {
     "@deckdeckgo/highlight-code": "^2.1.0",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "gatsby": "^2.24.67",
     "gatsby-plugin-sass": "^2.3.16",
     "gatsby-remark-highlight-code": "^2.1.0",
