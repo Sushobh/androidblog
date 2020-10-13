@@ -1,5 +1,5 @@
 @import './variables.scss';
-@import './variables.scss';
+
 
 #layout_header {
     background-color: $primaryColor;
@@ -8,6 +8,10 @@
     padding: 2px;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    padding: 5px;
 }
 
 #layout_header h1 {
@@ -19,6 +23,20 @@
     cursor: pointer;
 }
 
+#layout_main {
+    background-color: $backColor;
+    height : 100%;
+    display: flex;
+    flex-direction: column;
+}
 
+#child_holder {
+    margin-top: 30px;
+}
 
+#site_label_holder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 

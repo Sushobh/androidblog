@@ -48,10 +48,11 @@ export default function LatestPosts() {
   }
   
   function getPostLists(data) {
+    const cardStyle = {backgroundColor : "aliceblue"};
     return <List>
     {
      data.allMarkdownRemark.edges.map(item => {
-       return <Card id="list_item" key={item.node.id}>
+       return <Card id="list_item" key={item.node.id} style={cardStyle}>
                  <CardContent>
                  <Link to={item.node.frontmatter.slug} className="link">
                     <ListItemText primary={item.node.frontmatter.title} />
