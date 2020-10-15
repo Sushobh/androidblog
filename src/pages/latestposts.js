@@ -22,7 +22,10 @@ export default function LatestPosts() {
                   date(formatString: "MMMM DD, YYYY")
                   slug
                   title
-                  author
+                  author {
+                    name
+                    image
+                  }
                 }
               }
             }
@@ -50,7 +53,7 @@ export default function LatestPosts() {
                  <CardContent>
                  <Link to={item.node.frontmatter.slug} className="link">
                     <ListItemText primary={item.node.frontmatter.title} />
-                    <ListItemText  primary={item.node.frontmatter.author} />
+                    <ListItemText  primary={item.node.frontmatter.author.name} />
                     <ListItemText  secondary={item.node.excerpt} />
                   </Link>
               </CardContent>

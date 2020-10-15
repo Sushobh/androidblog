@@ -9,6 +9,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
+import RoundCropImage from "../components/roundimage"
 export default function AuthorList({data}) {
 
     const authors_mainStyle = {
@@ -17,25 +18,24 @@ export default function AuthorList({data}) {
         flexDirection : "column",
         alignItems : "center"
     }
-
-    let uniqueAuthors = new Set();
-    data.allMarkdownRemark.nodes.map(element => {
-        uniqueAuthors.add(element.frontmatter.author);
-        return element;
-    });
-
+    const cardStyle = {backgroundColor : "aliceblue",margin : "10px"};
     return <Layout>
         <div id="authors_main" style={authors_mainStyle}>
               <h3>Authors</h3>
               <List>
                   {
-                    Array.from(uniqueAuthors).map(item => {
-                        return <Link to={'/authors/'+item} className="link">  
+                   data.allAuthorsJson.nodes.map(item => {
+                        return <Card  style={cardStyle}>
+                           <CardContent>
+                           <Link to={'/authors/'+item.id} className="link">  
                             <ListItem button>
-                            <ListItemText primary={item}></ListItemText>
-                            
+                            <ListItemText primary={item.name}></ListItemText>
+                            <RoundCropImage imagepath={item.image} dimen="40px"></RoundCropImage>
                             </ListItem>
                             </Link>
+                           </CardContent>
+                         </Card>
+                          
                             
                     })
                   }
@@ -44,14 +44,15 @@ export default function AuthorList({data}) {
     </Layout>
 }
 
-export const pageQuery = graphql`query MyQuery {
-    allMarkdownRemark {
-      nodes {
-        frontmatter {
-          author
-        }
-      }
+export const pageQuery = graphql`
+{
+  allAuthorsJson {
+    nodes {
+      id
+      image
+      name
     }
   }
+}
   
 `

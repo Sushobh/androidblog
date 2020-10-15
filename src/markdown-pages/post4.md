@@ -1,10 +1,10 @@
 ---
-slug: "/blog/post4"
+slug: "/blog/post3"
 date: "2019-05-04"
-title: "Iraq War"
-author : "donald"
+title: "Economy"
+author : "sushobh"
 ---
 
-# UK
+# India
 
-George Bush
+What do i know?

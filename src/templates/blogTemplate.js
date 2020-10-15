@@ -21,7 +21,7 @@ export default function Template({
         <div id="blog_details">
           <h2>{frontmatter.date}</h2>
           <img src="https://www.whitehouse.gov/wp-content/uploads/2017/11/President-Trump-Official-Portrait-200x200.jpg" id="avatar"></img>
-          <h2>{frontmatter.author}</h2>
+          <h2>{frontmatter.author.name}</h2>
         </div>
         <br/>
         <div
@@ -43,7 +43,10 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
-        author
+        author {
+          name
+          image
+        }
       }
     }
   }
