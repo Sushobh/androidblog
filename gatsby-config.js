@@ -6,7 +6,15 @@
 
 module.exports = {
   /* Your site config here */
+
+  mapping : {
+   
+       'MarkdownRemark.frontmatter.author' : 'AuthorsJson',
+  },
+
+
   plugins: [
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -14,6 +22,19 @@ module.exports = {
         name: `markdown-pages`,
       },
     },
+    
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
+        name: `data`,
+      },
+    }
+
+
+    ,
+    `gatsby-transformer-yaml`,
+    `gatsby-transformer-json`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -25,12 +46,19 @@ module.exports = {
         ],
       },
     },
+
+
+
     {
       resolve: "gatsby-plugin-authors",
       options: {
         templatePath: `${__dirname}/src/templates/authorsindex.js`,
       },
-    }
+    },
+
+
+    
+
   ]
   
   ,

@@ -2,7 +2,7 @@
 slug: "/blog/post2"
 date: "2019-05-04"
 title: "RecyclerView tutorial"
-author : "Donald Trump"
+author : "sushobh"
 ---
 
 # How to use a recyclerview?
