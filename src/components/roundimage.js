@@ -5,7 +5,7 @@ export default function RoundCropImage(props){
     const style = {
         width : props.dimen,
         height : props.dimen,
-        borderRadius : "50%",
+        borderRadius : "40%",
         margin : "10px"
     }
 

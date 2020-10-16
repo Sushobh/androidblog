@@ -14,6 +14,9 @@
        line-height: 1.8;
    }
 
+   body {
+       background-color: $backColor;
+   }
 
    * { margin:0; padding:0; box-sizing:border-box; }
 

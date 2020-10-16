@@ -24,7 +24,6 @@
 }
 
 #layout_main {
-    background-color: $backColor;
     height : 100%;
     display: flex;
     flex-direction: column;
@@ -42,3 +41,8 @@
     align-items: center;
 }
 
+
+#other_links {
+    display: flex;
+    flex-direction: row;
+}

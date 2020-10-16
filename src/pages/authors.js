@@ -18,7 +18,7 @@ export default function AuthorList({data}) {
         flexDirection : "column",
         alignItems : "center"
     }
-    const cardStyle = {backgroundColor : "aliceblue",margin : "10px"};
+    const cardStyle = {margin : "10px"};
     return <Layout>
         <div id="authors_main" style={authors_mainStyle}>
               <h3>Authors</h3>
@@ -30,7 +30,7 @@ export default function AuthorList({data}) {
                            <Link to={'/authors/'+item.id} className="link">  
                             <ListItem button>
                             <ListItemText primary={item.name}></ListItemText>
-                            <RoundCropImage imagepath={item.image} dimen="40px"></RoundCropImage>
+                            <RoundCropImage imagepath={item.image} dimen="60px"></RoundCropImage>
                             </ListItem>
                             </Link>
                            </CardContent>

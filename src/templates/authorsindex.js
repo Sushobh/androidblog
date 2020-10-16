@@ -1,6 +1,7 @@
 import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
+import PostItem from "../components/postitem"
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card'
 import ListItemText from '@material-ui/core/ListItemText';
@@ -22,21 +23,11 @@ function postlistview(data) {
 }
 
 export function getPostLists(data) {
-  const cardStyle = {backgroundColor : "aliceblue"};
+
   return <List>
   {
    data.allMarkdownRemark.nodes.map(item => {
-     return <Card id="list_item" key={item.id} style={cardStyle}>
-               <CardContent>
-               <Link to={item.frontmatter.slug} className="link">
-                  <ListItemText primary={item.frontmatter.title} />
-                  <ListItemText  primary={item.frontmatter.author.name} />
-                  <ListItemText  secondary={item.excerpt} />
-                </Link>
-            </CardContent>
-            </Card>
-          
-       
+     return <PostItem item={item}></PostItem>
    })
   }
 </List>
@@ -59,6 +50,7 @@ query ($author: String) {
       frontmatter {
         author {
           name
+          image
         }
         title
         slug

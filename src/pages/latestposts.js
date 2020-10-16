@@ -4,8 +4,10 @@ import List from '@material-ui/core/List';
 import ListItemText from '@material-ui/core/ListItemText';
 import { Link } from "gatsby"
 import "../css/latestposts.scss"
+import RoundCropImage from "../components/roundimage"
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
+import PostItem from "../components/postitem"
 
 
 export default function LatestPosts() {
@@ -49,15 +51,7 @@ export default function LatestPosts() {
     return <List>
     {
      data.allMarkdownRemark.edges.map(item => {
-       return <Card id="list_item" key={item.node.id} style={cardStyle}>
-                 <CardContent>
-                 <Link to={item.node.frontmatter.slug} className="link">
-                    <ListItemText primary={item.node.frontmatter.title} />
-                    <ListItemText  primary={item.node.frontmatter.author.name} />
-                    <ListItemText  secondary={item.node.excerpt} />
-                  </Link>
-              </CardContent>
-              </Card>
+       return <PostItem item={item.node}></PostItem>
             
          
      })

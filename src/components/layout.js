@@ -17,7 +17,10 @@ export default function Layout({ children }) {
             <h5>The Android developer blog</h5>
          </div> 
       
-      <Link to="/about" style={{color : "white",paddingRight : "20px",textDecoration : "none"}}><h4>About</h4></Link>
+       <div id="other_links">
+       <Link to="/authors" style={{color : "white",paddingRight : "20px",textDecoration : "none"}}><h4>Authors</h4></Link>
+       <Link to="/about" style={{color : "white",paddingRight : "20px",textDecoration : "none"}}><h4>About</h4></Link>
+       </div>
       </div>
       <div id="child_holder" >
           {children}
