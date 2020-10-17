@@ -5,26 +5,5 @@
   "github" : "https://github.com/sushobh",
   "stackoverflow" : "https://stackoverflow.com/users/6642927/dishonered?tab=profile",
   "city" : "Mumbai"
-},
-
-{
-  "image" : "/images/sushobh.jpg",
-  "id" : "donald",  
-  "name" : "Donald Trump",
-  "github" : "https://github.com/sushobh",
-  "stackoverflow" : "https://stackoverflow.com/users/6642927/dishonered?tab=profile",
-  "city" : "New York"
 }
-,
-
-
-{
-  "image" : "/images/sushobh.jpg",
-  "id" : "burke",  
-  "name" : "Edmund Burke",
-  "github" : "https://github.com/sushobh",
-  "stackoverflow" : "https://stackoverflow.com/users/6642927/dishonered?tab=profile",
-  "city" : "New York"
-}
-
 ]
