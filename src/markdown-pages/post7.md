@@ -1,4 +1,4 @@
----
+--.
 slug: "/blog/ui-thread-communications"
 date: "2020-10-21"
 title: "Effective way to Send data from background thread to Main/UI thread"
@@ -8,7 +8,7 @@ author : "Tushar Pingale"
 
 While working on android, At any certain point of time you must be stuck while doing heavier operations. Since android by default runs all the code on the main thread and if you do any heavier operation on the main thread, the UI basically skips frames, and you will see a lag in the App. 
 
-<br>Now lets start how can we overcome this issue. There are main effective solution to overcome this, but for now we will go the handler solution.
+<br>Now lets start how can we overcome this issue. There are many effective solutions to overcome this, but for now we will go with the handler solution.
 
 <br>
 
@@ -30,7 +30,7 @@ Let's see some code :P
 
 **Step 1**
 
-Let's assume you are doing some heavy operation in your thread
+Let's assume you are doing some heavy operation in your thread, and` you need to send some data from background thread to you. 
 
 <br> 
 
