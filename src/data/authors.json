@@ -5,5 +5,11 @@
   "github" : "https://github.com/sushobh",
   "stackoverflow" : "https://stackoverflow.com/users/6642927/dishonered?tab=profile",
   "city" : "Mumbai"
+},
+{
+  "image" : "/images/tushar.png",
+  "id" : "tushar",  
+  "name" : "Tushar Pingale",
+  "city" : "Mumbai"
 }
 ]

@@ -2,7 +2,7 @@
 slug: "/blog/ui-thread-communications"
 date: "2020-10-21"
 title: "Effective way to Send data from background thread to Main/UI thread"
-author : "Tushar Pingale"
+author : "tushar"
 ---
 
 
@@ -35,7 +35,6 @@ Let's assume you are doing some heavy operation in your thread, and` you need to
 <br> 
 
 ```kotlin
-
     Thread{
             val bundle = Bundle()
             for (i in 1..10) {
@@ -51,7 +50,6 @@ Let's assume you are doing some heavy operation in your thread, and` you need to
                 handler.sendMessage(it)
             }
         }.start()
-
 ```
 <br> 
 
@@ -66,7 +64,6 @@ You need to get Looper.getMainLooper() and override handleMessage(msg: Message) 
 <br> 
 
 ```kotlin
-
 companion object{
     const val MESSAGE_KEY = "message_key"
 }
