@@ -11,5 +11,11 @@
   "id" : "tushar",  
   "name" : "Tushar Pingale",
   "city" : "Mumbai"
+},
+{
+  "image" : "/images/raj.jpeg",
+  "id" : "raj",  
+  "name" : "Raj Bopche",
+  "city" : "Mumbai"
 }
 ]
